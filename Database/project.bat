@@ -1,8 +1,8 @@
 ECHO off
 
-sqlcmd -S localhost -E -i pokemon_db_am.sql
+sqlcmd -S 127.0.0.1 -E -i pokemon_db_am.sql
 
-rem server is localhost
+rem server is 127.0.0.1
 
 ECHO .
 ECHO if no errors appear DB was created
