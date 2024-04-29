@@ -1,17 +1,27 @@
 package UserInterface;
 
+import DataAccess.ConnectDB;
+import DataAccess.PokemonDataAccess;
+import DataObjects.Pokemon;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main{
-    public static void main(String[] args){
-        Connection connection = null;
-        try {
-            connection = DriverManager.getConnection("jdbc:sqlite:C:/Users/mraut/Java_3/CSC-160-final-project-Pokedex/Database/Pokemon");
-            System.out.println("conn");
-        }
-        catch (Exception e){
+    public static void main(String[] args) throws SQLException {
 
-        }
+        PokemonDataAccess pokemonDataAccess = new PokemonDataAccess();
+
+//        List<Pokemon> pokemons = new ArrayList<>();
+//        pokemons = pokemonDataAccess.getAllPokemon();
+//
+//        for (Pokemon pokemon: pokemons) {
+//            System.out.println(pokemon.getPokemonName());
+//            System.out.println(pokemon.getPokemonDescription());
+//        }
+//        System.out.println(pokemonDataAccess.getPokemonStats(1).specialAttack);
     }
 }
